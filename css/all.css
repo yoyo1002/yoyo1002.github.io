@@ -1,0 +1,46 @@
+.bg-primary {
+  background-color: #7CC5C3 !important;
+}
+
+.text-whie {
+  color: #fff;
+}
+
+.text-gray {
+  color: #eee !important;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+body {
+  height: 2000px;
+}
+
+.navbar {
+  width: 100vw;
+  position: fixed;
+}
+
+.nav-link {
+  color: #244D49;
+}
+
+.nav-link:hover {
+  color: #F1F4FC !important;
+}
+
+.hvr-underline-from-center:before {
+  background-color: #244D49;
+}
+
+.parallax {
+  width: 100vw;
+  height: 75vh;
+  background-image: url("../img/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+/*# sourceMappingURL=all.css.map */
