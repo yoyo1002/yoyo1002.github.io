@@ -28,24 +28,54 @@ body {
   width: 250px;
 }
 
-.nav-link {
+.navbar .navbar-nav .nav-link {
   color: #244D49;
 }
 
-.nav-link:hover {
+.navbar .navbar-nav .nav-link:hover {
   color: #F1F4FC !important;
 }
 
-.hvr-underline-from-center:before {
+.navbar .navbar-nav .hvr-underline-from-center:before {
   background-color: #244D49;
 }
 
-.parallax {
+.banner {
   width: 100vw;
   height: 75vh;
   background-image: url("../img/banner.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  position: relative;
+}
+
+.banner .banner-inside {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+.banner_text {
+  background-color: rgba(124, 197, 195, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.banner_text .banner_text_title {
+  font-size: 20px;
+  color: #244D49;
+  margin-bottom: 20px;
+}
+
+.banner_text .banner_text_content {
+  color: #383737;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.banner_text .banner_text_content span {
+  font-size: 28px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=all.css.map */

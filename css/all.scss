@@ -10,21 +10,19 @@ body{
     z-index: 100;
     .navbar-nav{
         width: 250px;
+        .nav-link{
+            color:$themecolor-dark;
+            &:hover{
+                color: #F1F4FC !important;
+            }
+        }
+        .hvr-underline-from-center:before{
+            background-color:$themecolor-dark;
+        }
     }
 }
 
-.nav-link{
-    color: #244D49;
-    &:hover{
-        color: #F1F4FC !important;
-    }
-}
-
-.hvr-underline-from-center:before{
-    background-color: #244D49;
-}
-
-.parallax{
+.banner{
     width: 100vw;
     height: 75vh;
     background-image: url('../img/banner.jpg');
@@ -32,4 +30,31 @@ body{
     background-position: center;
     background-attachment: fixed;
 
+    position: relative;
+    .banner-inside{
+        position: absolute;
+        top: 30%;
+        left: 5%;
+    }  
+}
+.banner_text{
+    // width: 20%;
+    background-color: rgba(124,197,195,0.6);
+    padding: 20px;
+    border-radius: 10px;
+
+    .banner_text_title{
+        font-size:20px;
+        color: $themecolor-dark;
+        margin-bottom: 20px;
+    }
+    .banner_text_content{
+        color: rgb(56, 55, 55);
+        font-size: 18px;
+        line-height: 28px;
+        span{
+            font-size: 28px;
+            font-weight: bold;
+        }
+    }
 }
