@@ -21,6 +21,11 @@ body {
 .navbar {
   width: 100vw;
   position: fixed;
+  z-index: 100;
+}
+
+.navbar .navbar-nav {
+  width: 250px;
 }
 
 .nav-link {
