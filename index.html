@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="fb:app_id" content="362221338350681" />
+    <meta property="fb:admins" content="1826968480779143" />
     <title>yoyo's birth</title>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -19,6 +21,11 @@
 </head>
 
 <body>
+    <!-- facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v8.0&appId=362221338350681&autoLogAppEvents=1"
+        nonce="cgLbbhKn"></script>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <a class="navbar-brand text-gray text-bold ml-5" href="#">祐祐的謝卡</a>
@@ -51,7 +58,10 @@
             <div class="col pohoto"></div>
         </div>
     </section>
-    <section class="guestbook"></section>
+    <section class="guestbook">
+        <div class="fb-comments" data-href="https://yoyo1002.github.io/" data-numposts="5" data-width=""
+            data-order-by="reverse_time"></div>
+    </section>
     <footer></footer>
 
 
