@@ -1,9 +1,7 @@
 @import 'var';
 @import 'style';
+@import 'mixin';
 
-body{
-    height: 2000px;
-}
 .navbar{
     width: 100vw;
     position: fixed;
@@ -58,3 +56,53 @@ body{
         }
     }
 }
+
+.main{
+    .info_content{
+        font-size: 1.2rem;
+        border: 3px dashed $themecolor-primary;
+        padding: 20px 50px;
+        .item{
+            font-weight: bold;
+        }
+    }
+    .photo{
+        .pixbox{
+            border: 2px dashed $themecolor-primary;
+            width: 110px;
+            height: 110px;
+            background-color: gray;
+            // background-image: url(../img/daily/01.jpg);
+            background-position: center;
+            background-size: cover;
+            @include xlg{
+                width: 120px;
+                height: 120px;
+            }
+        }
+        @for $i from 1 through 2{
+            .pixbox0#{$i} {
+                background-image: url(../img/daily/0#{$i}.jpg);
+            }
+        }
+    }
+}
+
+
+
+.subtitle{
+    margin-top: 3rem;
+    .box{
+        width: 25px;
+        height: 12px;
+        background-color:$themecolor-primary;
+        margin: auto;
+    }
+    p{
+        font-weight: bold;
+        font-size: 24px;
+    }
+}
+
+
+
