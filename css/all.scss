@@ -88,6 +88,75 @@
     }
 }
 
+//滑播圖
+.swiper-container {
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+
+    .swiper-wrapper {
+        height: auto;
+
+        .swiper-slide {
+            height: auto;
+            text-align: center;
+            font-size: 18px;
+            background: transparent;
+
+            img {
+                background-color: rgba(0, 0, 0, 0.6);
+                opacity: 0.4;
+                box-shadow: 5px 3px 10px rgb(41, 40, 40);
+            }
+
+            .swiper-text {
+                display:none;
+                color:  rgb(56, 55, 55) !important;
+                margin-bottom: 0;
+            }
+        }
+
+        .swiper-slide-active {
+            .swiper-text {
+               display: block;
+            }
+            img {
+                opacity: 1;
+            }
+        }
+    }
+
+}
+
+//進度球
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    width: auto;
+}
+
+.swiper-pagination {
+    left: 50% !important;
+    transform: translateX(-50%);
+}
+
+.swiper-pagination-bullets {
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: #000;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $themecolor-primary;
+    }
+}
+
+
+
+
+
+
 
 
 .subtitle{
