@@ -17,8 +17,12 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <!-- Hover.css v2.1.1 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" rel="stylesheet" />
+    <!-- wickedCSS -->
+    <link rel="stylesheet" href="http://kristofferandreasen.github.io/wickedCSS/dist/wickedcss.min.css">
     <!-- lightbox -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- cssReset -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="css/all.css">
@@ -52,7 +56,11 @@
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <h1><a class="navbar-brand text-gray text-bold ml-5" href="#">祐祐的謝卡</a></h1>
+        <h1><a class="navbar-brand text-gray text-bold ml-5 d-flex" href="#">
+            <span class="d-none d-lg-block">Yoyo's Birth Announcement</span>
+            <span class="d-block d-lg-none">Yoyo's Birth Anc</span>
+            <i class="fas fa-heart ml-3 heartbeat"></i></a>
+        </h1>
         <button class="navbar-toggler mr-5" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -63,10 +71,13 @@
                     <a class="nav-link hvr-underline-from-center" href="#">TOP<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item hvr-underline-from-center">
-                    <a class="nav-link" href="#">關於祐祐</a>
+                    <a class="nav-link" href="#anchor1">關於紹宇</a>
                 </li>
                 <li class="nav-item hvr-underline-from-center">
-                    <a class="nav-link" href="#">留下祝福</a>
+                    <a class="nav-link" href="#anchor2">親友合影</a>
+                </li>
+                <li class="nav-item hvr-underline-from-center">
+                    <a class="nav-link" href="#anchor3">留下祝福</a>
                 </li>
             </ul>
         </div>
@@ -74,8 +85,8 @@
         </div>
     </nav>
     <!-- banner -->
-    <section class="banner mb-3">
-        <div class="banner_text banner-inside d-none d-lg-block">
+    <section class="banner mb-3 position-r">
+        <div class="banner_text banner-inside d-none d-lg-block fadeIn">
             <h2 class="banner_text_title">親愛的叔叔 阿姨 各位長輩們 大家好</h2>
             <p class="banner_text_content">我是<span>紹宇</span>，是出生在愛你愛你年的天秤座小老鼠，<br>
                 看我一臉微笑就知道，<br>
@@ -83,8 +94,17 @@
                 感謝您們給我的關愛與祝福，<br>
                 也祝您平安順遂，健康喜樂喔！</p>
         </div>
+        <video autoplay muted playsinline class="banner_video banner_video_inside d-none d-lg-block">
+            <source type="video/mp4" src="video/heartbeat.mp4">
+            </source>
+            <!-- <source src="" type="video/webm">
+            </source>
+            <source src="" type="video/mov">
+            </source> -->
+        </video>
+        <iframe allow="autoplay" style="display:none" src="video/heartbeat.mp4"></iframe>
     </section>
-    <div class="banner_text d-block d-lg-none text-center w-md-75 w-95 m-auto">
+    <div class="banner_text d-lg-none text-center w-md-75 w-95 m-auto position-r">
         <h2 class="banner_text_title">親愛的叔叔 阿姨 各位長輩們 大家好</h2>
         <p class="banner_text_content">我是<span>紹宇</span>，<br>
             是出生在愛你愛你年的天秤座小老鼠，<br>
@@ -92,9 +112,19 @@
             我每天在充滿愛的環境下漸漸長大，<br>
             感謝您們給我的關愛與祝福，<br>
             也祝您平安順遂，健康喜樂喔！</p>
+        <video autoplay muted playsinline class="banner_video banner_video_outside">
+            <source type="video/mp4" src="video/heartbeat.mp4">
+            </source>
+            <!-- <source src="" type="video/webm">
+                </source>
+                <source src="" type="video/mov">
+                </source> -->
+        </video>
     </div>
+
     <!-- main -->
-    <section class="main">
+    <section class="main position-r">
+        <div id="anchor1" class="fake-anchor"></div>
         <div class="container">
             <div class="row text-gray-dark">
                 <div class="col-12 col-lg-6 info">
@@ -102,7 +132,7 @@
                         <div class="box mb-3"></div>
                         <p>關於紹宇</p>
                     </div>
-                    <ul class="info_content m-auto w-75">
+                    <ul class="info_content m-auto w-75" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="100" data-aos-easing="ease-in-out">
                         <li class="mb-3">性別：<i class="fas fa-mars"></i></li>
                         <li class="mb-3">生日：2020/10/02</li>
                         <li class="mb-3">星座：天秤座</li>
@@ -116,54 +146,55 @@
                         <div class="box mb-3"></div>
                         <p>紹宇日常</p>
                     </div>
-                    <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-flex flex-wrap justify-content-center" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100" data-aos-easing="ease-in-out">
                         <a href="img/daily/01.jpg" data-lightbox="image-1" data-title="yoyoDaily">
-                            <div class="pixbox pixbox01"></div>
+                            <div class="pixbox pixbox01 hvr-bounce-in"></div>
+                        </a>
+                        <a href="img/daily/02.jpg" data-lightbox="image-1" data-title="yoyoDaily">
+                            <div class="pixbox pixbox02 hvr-bounce-in"></div>
+                        </a>
+                        <a href="img/daily/03.jpg" data-lightbox="image-1" data-title="yoyoDaily">
+                            <div class="pixbox pixbox03 hvr-bounce-in"></div>
+                        </a>
+                        <a href="img/daily/04.jpg" data-lightbox="image-1" data-title="yoyoDaily">
+                            <div class="pixbox pixbox04 hvr-bounce-in"></div>
+                        </a>
+                        <a href="img/daily/05.jpg" data-lightbox="image-1" data-title="yoyoDaily">
+                            <div class="pixbox pixbox05 hvr-bounce-in"></div>
+                        </a>
+                        <a href="img/daily/06.jpg" data-lightbox="image-1" data-title="yoyoDaily">
+                            <div class="pixbox pixbox06 hvr-bounce-in"></div>
+                        </a>
+                        <a href="img/daily/07.jpg" data-lightbox="image-1" data-title="yoyoDaily">
+                            <div class="pixbox pixbox07 hvr-bounce-in"></div>
+                        </a>
+                        <a href="img/daily/08.jpg" data-lightbox="image-1" data-title="yoyoDaily">
+                            <div class="pixbox pixbox08 hvr-bounce-in"></div>
+                        </a>
+                        <a href="img/daily/09.jpg" data-lightbox="image-1" data-title="yoyoDaily">
+                            <div class="pixbox pixbox09 hvr-bounce-in"></div>
+                        </a>
+                        <a href="img/daily/10.jpg" data-lightbox="image-1" data-title="yoyoDaily">
+                            <div class="pixbox pixbox10 hvr-bounce-in"></div>
+                        </a>
+                        <a href="img/daily/11.jpg" data-lightbox="image-1" data-title="yoyoDaily">
+                            <div class="pixbox pixbox11 hvr-bounce-in"></div>
                         </a>
                         <a href="img/daily/01.jpg" data-lightbox="image-1" data-title="yoyoDaily">
-                            <div class="pixbox pixbox02"></div>
-                        </a>
-                        <a href="img/daily/01.jpg" data-lightbox="image-1" data-title="yoyoDaily">
-                            <div class="pixbox pixbox03"></div>
-                        </a>
-                        <a href="img/daily/01.jpg" data-lightbox="image-1" data-title="yoyoDaily">
-                            <div class="pixbox pixbox04"></div>
-                        </a>
-                        <a href="img/daily/01.jpg" data-lightbox="image-1" data-title="yoyoDaily">
-                            <div class="pixbox pixbox05"></div>
-                        </a>
-                        <a href="img/daily/01.jpg" data-lightbox="image-1" data-title="yoyoDaily">
-                            <div class="pixbox pixbox06"></div>
-                        </a>
-                        <a href="img/daily/01.jpg" data-lightbox="image-1" data-title="yoyoDaily">
-                            <div class="pixbox pixbox07"></div>
-                        </a>
-                        <a href="img/daily/01.jpg" data-lightbox="image-1" data-title="yoyoDaily">
-                            <div class="pixbox pixbox08"></div>
-                        </a>
-                        <a href="img/daily/01.jpg" data-lightbox="image-1" data-title="yoyoDaily">
-                            <div class="pixbox pixbox09"></div>
-                        </a>
-                        <a href="img/daily/01.jpg" data-lightbox="image-1" data-title="yoyoDaily">
-                            <div class="pixbox pixbox10"></div>
-                        </a>
-                        <a href="img/daily/01.jpg" data-lightbox="image-1" data-title="yoyoDaily">
-                            <div class="pixbox pixbox11"></div>
-                        </a>
-                        <a href="img/daily/01.jpg" data-lightbox="image-1" data-title="yoyoDaily">
-                            <div class="pixbox pixbox12"></div>
+                            <div class="pixbox pixbox12 hvr-bounce-in"></div>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row text-gray-dark mt-5 bg-secondary">
-            <div class="col">
+        <div class="text-gray-dark mt-5 bg-secondary position-r family">
+            <div id="anchor2" class="fake-anchor"></div>
+            <div class="carousel">
                 <div class="subtitle text-center mb-4">
                     <div class="box mb-3"></div>
                     <p>親友の關愛</p>
                 </div>
-                <div class="carousel swiper-container">
+                <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="https://placem.at/things" class="w-100" alt="" srcset="">
@@ -200,21 +231,24 @@
             </div>
         </div>
     </section>
-    <section class="guestbook container">
-        <div class="row">
-            <div class="col">
-                <div class="subtitle text-center mb-4">
-                    <div class="box mb-3"></div>
-                    <p>留下點祝福吧... <i class="fas fa-pen"></i></p>
+    <section class="guestbook position-r">
+        <div id="anchor3" class="fake-anchor"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="subtitle text-center mb-4">
+                        <div class="box mb-3"></div>
+                        <p>留下點祝福吧... <i class="fas fa-pen"></i></p>
+                    </div>
+                    <div class="d-lg-flex justify-content-center d-none">
+                        <div class="fb-comments" data-href="https://yoyo1002.github.io/" data-numposts="5" data-width="750"
+                            data-order-by="reverse_time"></div>
+                    </div>
+                    <div class="fb-comments d-lg-none" data-href="https://yoyo1002.github.io/" data-numposts="5"
+                        data-width="" data-order-by="reverse_time"></div>
                 </div>
-                <div class="d-lg-flex justify-content-center d-none">
-                    <div class="fb-comments" data-href="https://yoyo1002.github.io/" data-numposts="5" data-width="750"
-                        data-order-by="reverse_time"></div>
-                </div>
-                <div class="fb-comments d-lg-none" data-href="https://yoyo1002.github.io/" data-numposts="5"
-                    data-width="" data-order-by="reverse_time"></div>
             </div>
-        </div>
+        </div> 
     </section>
     <footer class="bg-primary text-center text-gray py-3">
         <p>©2020 僅供親友情感交流，無商用，若侵權請來信 <a href="mailto:shoppingq@gmail.com">shoppingq@gmail.com</a></p>
@@ -234,7 +268,24 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        //toggle自動收合
+        var active = false
+        $(window).resize(function () {
+            console.log($(window).width() < 768);
+            if ($(window).width() < 992) {  //當視窗小於768時才運作
+                active = true
+            } else {
+                active = false
+            }
+        });
+
+        $('.navbar-nav a').on('click', function () {
+            if (active) { 
+                $('.navbar-toggler').click();
+            }
+        });
         // Initialize Swiper
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 2,
@@ -252,9 +303,9 @@
                 modifier: 1, //物件彎度
                 slideShadows: true,
             },
-            autoplay: {
-                delay: 2800,
-            },
+            // autoplay: {
+            //     delay: 2800,
+            // },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -271,7 +322,18 @@
         lightbox.option({
             'showImageNumberLabel': false,
         })
-        
+
+        // AOS
+        AOS.init();
+
+        //video iframe
+        ifm.onload = function () {
+            vdo.src = 'video/heartbeat.mp4';
+            vdo.oncanplay = function () {
+                vdo.play();
+            };
+        };
+
     </script>
 </body>
 

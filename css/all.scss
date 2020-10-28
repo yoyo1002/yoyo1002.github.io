@@ -1,13 +1,25 @@
 @import 'var';
 @import 'style';
 @import 'mixin';
+@import 'shared';
+
+html{
+    scroll-behavior: smooth;
+}
 
 .navbar{
-    width: 100vw;
+    width: 100%;
     position: fixed;
     z-index: 100;
+    .navbar-brand{
+        font-family: 'Indie Flower';
+        font-size: 28px;
+        .fa-heart{
+            color: #EC1C24;
+        }
+    }
     .navbar-nav{
-        width: 250px;
+        width: 300px;
         .nav-link{
             color:$themecolor-dark;
             &:hover{
@@ -21,8 +33,8 @@
 }
 
 .banner{
-    width: 100vw;
-    height: 75vh;
+    width: 100%;
+    height: 100vh;
     background-image: url('../img/banner.jpg');
     background-size: cover;
     background-position: center;
@@ -56,6 +68,22 @@
         }
     }
 }
+.banner_video{
+    mix-blend-mode: multiply;
+}
+.banner_video_inside{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.banner_video_outside{
+    width: 25%;
+    
+    position: absolute;
+    bottom: -32px;
+    right: -5px;
+}
+
 
 .main{
     .info_content{
@@ -68,7 +96,7 @@
     }
     .photo{
         .pixbox{
-            border: 2px dashed $themecolor-primary;
+            border: 2.5px dashed $themecolor-primary;
             width: 110px;
             height: 110px;
             // background-color: gray;
@@ -80,12 +108,22 @@
                 height: 120px;
             }
         }
-        @for $i from 1 through 2{
+        @for $i from 0 through 9{
             .pixbox0#{$i} {
                 background-image: url(../img/daily/0#{$i}.jpg);
             }
+            .pixbox1#{$i} {
+                background-image: url(../img/daily/1#{$i}.jpg);
+            }
         }
     }
+    .family{
+        width: 100%;
+    }
+}
+.hvr-bounce-in:active, .hvr-bounce-in:focus, .hvr-bounce-in:hover{
+    position: relative;
+    z-index: 100;
 }
 
 //滑播圖
@@ -153,12 +191,6 @@
 }
 
 
-
-
-
-
-
-
 .subtitle{
     margin-top: 3rem;
     .box{
@@ -178,4 +210,21 @@
     // border: 1px solid black;
 }
 
+
+//假錨點
+.fake-anchor{
+    width: 50px;
+    height: 10px;
+    // background-color: aquamarine; 
+
+    position: absolute;
+    left: 0;
+}
+
+#anchor1{
+    top: -26px;
+}
+#anchor2,#anchor3{
+    top: -10px;
+}
 

@@ -26,14 +26,31 @@
   width: 95%;
 }
 
+.position-r {
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar {
-  width: 100vw;
+  width: 100%;
   position: fixed;
   z-index: 100;
 }
 
+.navbar .navbar-brand {
+  font-family: 'Indie Flower';
+  font-size: 28px;
+}
+
+.navbar .navbar-brand .fa-heart {
+  color: #EC1C24;
+}
+
 .navbar .navbar-nav {
-  width: 250px;
+  width: 300px;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -49,8 +66,8 @@
 }
 
 .banner {
-  width: 100vw;
-  height: 75vh;
+  width: 100%;
+  height: 100vh;
   background-image: url("../img/banner.jpg");
   background-size: cover;
   background-position: center;
@@ -87,6 +104,23 @@
   font-weight: bold;
 }
 
+.banner_video {
+  mix-blend-mode: multiply;
+}
+
+.banner_video_inside {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.banner_video_outside {
+  width: 25%;
+  position: absolute;
+  bottom: -32px;
+  right: -5px;
+}
+
 .main .info_content {
   font-size: 1.2rem;
   border: 3px dashed #7CC5C3;
@@ -98,7 +132,7 @@
 }
 
 .main .photo .pixbox {
-  border: 2px dashed #7CC5C3;
+  border: 2.5px dashed #7CC5C3;
   width: 110px;
   height: 110px;
   background-position: center;
@@ -112,12 +146,93 @@
   }
 }
 
+.main .photo .pixbox00 {
+  background-image: url(../img/daily/00.jpg);
+}
+
+.main .photo .pixbox10 {
+  background-image: url(../img/daily/10.jpg);
+}
+
 .main .photo .pixbox01 {
   background-image: url(../img/daily/01.jpg);
 }
 
+.main .photo .pixbox11 {
+  background-image: url(../img/daily/11.jpg);
+}
+
 .main .photo .pixbox02 {
   background-image: url(../img/daily/02.jpg);
+}
+
+.main .photo .pixbox12 {
+  background-image: url(../img/daily/12.jpg);
+}
+
+.main .photo .pixbox03 {
+  background-image: url(../img/daily/03.jpg);
+}
+
+.main .photo .pixbox13 {
+  background-image: url(../img/daily/13.jpg);
+}
+
+.main .photo .pixbox04 {
+  background-image: url(../img/daily/04.jpg);
+}
+
+.main .photo .pixbox14 {
+  background-image: url(../img/daily/14.jpg);
+}
+
+.main .photo .pixbox05 {
+  background-image: url(../img/daily/05.jpg);
+}
+
+.main .photo .pixbox15 {
+  background-image: url(../img/daily/15.jpg);
+}
+
+.main .photo .pixbox06 {
+  background-image: url(../img/daily/06.jpg);
+}
+
+.main .photo .pixbox16 {
+  background-image: url(../img/daily/16.jpg);
+}
+
+.main .photo .pixbox07 {
+  background-image: url(../img/daily/07.jpg);
+}
+
+.main .photo .pixbox17 {
+  background-image: url(../img/daily/17.jpg);
+}
+
+.main .photo .pixbox08 {
+  background-image: url(../img/daily/08.jpg);
+}
+
+.main .photo .pixbox18 {
+  background-image: url(../img/daily/18.jpg);
+}
+
+.main .photo .pixbox09 {
+  background-image: url(../img/daily/09.jpg);
+}
+
+.main .photo .pixbox19 {
+  background-image: url(../img/daily/19.jpg);
+}
+
+.main .family {
+  width: 100%;
+}
+
+.hvr-bounce-in:active, .hvr-bounce-in:focus, .hvr-bounce-in:hover {
+  position: relative;
+  z-index: 100;
 }
 
 .swiper-container {
@@ -198,5 +313,20 @@
 
 .plug-in {
   width: 700px;
+}
+
+.fake-anchor {
+  width: 50px;
+  height: 10px;
+  position: absolute;
+  left: 0;
+}
+
+#anchor1 {
+  top: -26px;
+}
+
+#anchor2, #anchor3 {
+  top: -10px;
 }
 /*# sourceMappingURL=all.css.map */
