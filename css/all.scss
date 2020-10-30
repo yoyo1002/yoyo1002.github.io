@@ -3,36 +3,42 @@
 @import 'mixin';
 @import 'shared';
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-.navbar{
+.navbar {
     width: 100%;
     position: fixed;
     z-index: 100;
-    .navbar-brand{
+
+    .navbar-brand {
         font-family: 'Indie Flower';
         font-size: 28px;
-        .fa-heart{
+
+        .fa-heart {
             color: #EC1C24;
         }
     }
-    .navbar-nav{
+
+    .navbar-nav {
         width: 300px;
-        .nav-link{
-            color:$themecolor-dark;
-            &:hover{
+
+        .nav-link {
+            color: $themecolor-dark;
+
+            &:hover {
                 color: #F1F4FC !important;
             }
         }
-        .hvr-underline-from-center:before{
-            background-color:$themecolor-dark;
+
+        .hvr-underline-from-center:before {
+            background-color: $themecolor-dark;
         }
     }
 }
 
-.banner{
+.banner {
     width: 100%;
     height: 100vh;
     background-image: url('../img/banner.jpg');
@@ -40,71 +46,86 @@ html{
     background-position: center;
     background-attachment: fixed;
 
+    @media (max-width: 768px) {
+        background-attachment: scroll;
+    }
+
     position: relative;
-    .banner-inside{
+
+    .banner-inside {
         position: absolute;
         top: 30%;
         left: 5%;
-    }  
+    }
 }
-.banner_text{
+
+.banner_text {
     // width: 20%;
-    background-color: rgba(124,197,195,0.6);
+    background-color: rgba(124, 197, 195, 0.6);
     padding: 20px;
     border-radius: 10px;
 
-    .banner_text_title{
-        font-size:20px;
+    .banner_text_title {
+        font-size: 20px;
         color: $themecolor-dark;
         margin-bottom: 20px;
     }
-    .banner_text_content{
+
+    .banner_text_content {
         color: rgb(56, 55, 55);
         font-size: 18px;
         line-height: 28px;
-        span{
+
+        span {
             font-size: 28px;
             font-weight: bold;
         }
     }
 }
-.banner_video{
+
+.banner_video {
     mix-blend-mode: multiply;
 }
-.banner_video_inside{
+
+.banner_video_inside {
     position: absolute;
     bottom: 20px;
     right: 20px;
 }
-.banner_video_outside{
+
+.banner_video_outside {
     width: 25%;
-    
+
     position: absolute;
     bottom: -32px;
     right: -5px;
 }
 
 
-.main{
-    .info_content{
-        width: 100%; 
+.main {
+    .info_content {
+        width: 100%;
         font-size: 1.2rem;
         border: 3px dashed $themecolor-primary;
         padding: 20px 30px;
-        @include sm{
+
+        @include sm {
             width: 90%;
             padding: 20px 50px;
         }
-        @include md{
+
+        @include md {
             width: 80%;
             padding: 20px 100px;
         }
-        .item{
+
+        .item {
             font-weight: bold;
         }
     }
-    .photo{
-        .pixbox{
+
+    .photo {
+        .pixbox {
             border: 2.5px dashed $themecolor-primary;
             width: 110px;
             height: 110px;
@@ -112,25 +133,32 @@ html{
             // background-image: url(../img/daily/01.jpg);
             background-position: center;
             background-size: cover;
-            @include xlg{
+
+            @include xlg {
                 width: 120px;
                 height: 120px;
             }
         }
-        @for $i from 0 through 9{
+
+        @for $i from 0 through 9 {
             .pixbox0#{$i} {
                 background-image: url(../img/daily/0#{$i}.jpg);
             }
+
             .pixbox1#{$i} {
                 background-image: url(../img/daily/1#{$i}.jpg);
             }
         }
     }
-    .family{
+
+    .family {
         width: 100%;
     }
 }
-.hvr-bounce-in:active, .hvr-bounce-in:focus, .hvr-bounce-in:hover{
+
+.hvr-bounce-in:active,
+.hvr-bounce-in:focus,
+.hvr-bounce-in:hover {
     position: relative;
     z-index: 100;
 }
@@ -157,16 +185,17 @@ html{
             }
 
             .swiper-text {
-                display:none;
-                color:  rgb(56, 55, 55) !important;
+                display: none;
+                color: rgb(56, 55, 55) !important;
                 margin-bottom: 0;
             }
         }
 
         .swiper-slide-active {
             .swiper-text {
-               display: block;
+                display: block;
             }
+
             img {
                 opacity: 1;
             }
@@ -200,28 +229,30 @@ html{
 }
 
 
-.subtitle{
+.subtitle {
     margin-top: 3rem;
-    .box{
+
+    .box {
         width: 25px;
         height: 12px;
-        background-color:$themecolor-primary;
+        background-color: $themecolor-primary;
         margin: auto;
     }
-    p{
+
+    p {
         font-weight: bold;
         font-size: 24px;
     }
 }
 
-.plug-in{
+.plug-in {
     width: 700px;
     // border: 1px solid black;
 }
 
 
 //假錨點
-.fake-anchor{
+.fake-anchor {
     width: 50px;
     height: 10px;
     // background-color: aquamarine; 
@@ -230,10 +261,11 @@ html{
     left: 0;
 }
 
-#about{
+#about {
     top: -26px;
 }
-#family,#guestbook{
+
+#family,
+#guestbook {
     top: -10px;
 }
-

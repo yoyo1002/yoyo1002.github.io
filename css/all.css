@@ -75,6 +75,12 @@ html {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .banner {
+    background-attachment: scroll;
+  }
+}
+
 .banner .banner-inside {
   position: absolute;
   top: 30%;
@@ -245,7 +251,9 @@ html {
   width: 100%;
 }
 
-.hvr-bounce-in:active, .hvr-bounce-in:focus, .hvr-bounce-in:hover {
+.hvr-bounce-in:active,
+.hvr-bounce-in:focus,
+.hvr-bounce-in:hover {
   position: relative;
   z-index: 100;
 }
@@ -341,7 +349,8 @@ html {
   top: -26px;
 }
 
-#family, #guestbook {
+#family,
+#guestbook {
   top: -10px;
 }
 /*# sourceMappingURL=all.css.map */
