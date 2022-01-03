@@ -285,6 +285,11 @@ html {
   right: -5px;
 }
 
+.main {
+  width: 99vw;
+  overflow: hidden;
+}
+
 .main .info_content {
   width: 100%;
   font-size: 1.2rem;
